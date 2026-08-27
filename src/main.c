@@ -322,7 +322,7 @@ DNSResult dns_resolve_ipv4(DNSResolver *resolver, String domain_name) {
     DNSRequest req = {0};
     req.header = (DNSHeader){
         .transaction_id = rand_u16(),
-        .flags = 0,
+        .flags = 0x0100,
         .ques_count = 1,
         .ans_count = 0,
         .authority_count = 0,
